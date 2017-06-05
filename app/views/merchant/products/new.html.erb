@@ -1,0 +1,33 @@
+<div class="form-wrapper">
+<div class="registration-banner"></div>
+
+
+ <div class="form-inputs salelogin">
+      <div class="form-group">
+
+  <%= simple_form_for [:merchant, @product] do |f| %>
+
+  <%= f.input :name, label: false, placeholder: "Title", input_html: {class: "finput"} %>
+
+  <%= f.input :price, label: false, placeholder: "Price (€)", input_html: {class: "finput"} %>
+
+  <%= f.input :description, label: false, placeholder: "Description", input_html: {class: "finput"} %>
+
+  <div class="photo-upload">
+
+    <div class="photo-label">Upload a photo</div>
+    <%= f.input :photo, input_html: {class: "finput"}, label: false %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
+
+  <%= f.input :category, label: false, placeholder: "Category (men, women, etc..)", input_html: {class: "finput"} %>
+
+  <%= f.input :url, label: false, placeholder: "URL", input_html: {class: "finput"} %>
+
+  <div class="submit-button text-center">
+  <%= f.button :submit %>
+  </div>
+</div>
+</div>
+<% end %>
+</div>
